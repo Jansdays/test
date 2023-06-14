@@ -1,0 +1,962 @@
+@charset "utf-8";
+/*------------------- 头部导航栏start----------------- */
+/* 头部的布局 */
+header {
+    position: relative;
+    width: 1366px;
+    height: 130px;
+    margin: 0 auto;
+    background-color: pink;
+}
+ 
+/* 头部的视频背景 */
+header video {
+    width: 100%;
+    height: 100%;
+    /* 发现视频上下有缝隙(父容器的颜色) */
+    /* 代表没有铺满该容器 */
+    /* 使video标签铺满父容器 */
+    object-fit: fill;
+}
+ 
+/* 头部左侧的导航 */
+header nav {
+    position: absolute;
+    top: 0;
+    /*块级元素添加绝对定位以后,宽度会从默认的百分百变成由内容撑开 默认是0 记得设置宽度 */
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    /* background-color: rgb(182, 62, 134); */
+}
+ 
+header .nav-left ul li {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 7px;
+    color: #fff;
+    cursor: pointer;
+}
+ 
+/* 利用伪元素配合字体图标加小电视图标 */
+header .nav-left ul li:first-child::before {
+    content: '\e60b';
+    font-family: "iconfont" !important;
+    font-size: 18px !important;
+    margin-right: 5px;
+    float: left;
+    margin-top: 0;
+    /* 因为图标的大小改变,会引起与旁边文字的对齐效果不符合效果图 */
+    /* 先利用浮动,让它顶部对齐(已经可以解决部分问题了) */
+    /* 再利用mt, 参数为正值(下移)或者是负值(上移)强行去调整位置 */
+    /* 让肉眼看起来,对齐的即可 */
+}
+ 
+/* 校园十佳 */
+header nav .top10 {
+    position: relative;
+    float: left;
+    width: 54px;
+    height: 36px;
+    /* 让容器强行居中 */
+    margin-top: 10px;
+    /* background-color: pink; */
+    /* 让十佳内容默认看不见 */
+    overflow: hidden;
+    cursor: pointer;
+}
+ 
+header nav .top10 img {
+    width: 100%;
+    height: 100%;
+    /* 改变为块级元素 确保没有底部间隙问题 */
+    display: block;
+}
+ 
+.top10 p {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+ 
+.top-box {
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+}
+ 
+header nav .top10:hover .top-box {
+    top: -34px;
+}
+ 
+/* 下载客户端 */
+header .download {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 10px;
+}
+ 
+header .download a {
+    color: #fff;
+}
+ 
+header .download a::before {
+    content: '\e61a';
+    font-family: "iconfont" !important;
+    font-size: 18px !important;
+}
+ 
+/* 搜索框 */
+header .search {
+    float: left;
+    width: 315px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, .3);
+    margin-left: 15px;
+    margin-top: 10px;
+    border: 1px solid #f3f4f5;
+}
+ 
+header .search:hover {
+    background-color: rgb(255, 255, 255, .7);
+}
+ 
+header .search input {
+    width: 250px;
+    height: 40px;
+    padding-left: 20px;
+    /* 清除输入框的轮廓线 */
+    outline: none;
+    /* 清除输入框的边框线 */
+    border: none;
+    background-color: transparent;
+}
+ 
+header .search input::placeholder {
+    color: #333;
+}
+ 
+header .search::after {
+    float: right;
+    content: '\e600';
+    font-family: "iconfont" !important;
+    font-size: 20px !important;
+    margin-right: 10px;
+    line-height: 40px;
+    color: #fff;
+}
+ 
+/* 登录模块 */
+header .login {
+    float: left;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+ 
+header .login a {
+    display: block;
+    color: #0eb2ec;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+}
+ 
+/* 用户功能 */
+header .userFunction {
+    float: left;
+    height: 60px;
+    margin-left: 15px;
+    padding-top: 12px;
+}
+ 
+header .userFunction em {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 2px;
+    color: #fff;
+ 
+}
+ 
+header .userFunction li {
+    float: left;
+    padding: 0 5px;
+    text-align: center;
+}
+ 
+header .userFunction li i {
+    color: #fff;
+    font-size: 12px;
+}
+ 
+header .userFunction li em {
+    position: relative;
+    top: 0;
+    display: block;
+    font-size: 18px !important;
+    transition: all 0.3s;
+}
+ 
+header .userFunction li:hover em {
+    top: -5px;
+}
+ 
+/* 投稿上传 */
+header .upload {
+    float: left;
+    width: 80px;
+    height: 34px;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+ 
+header .upload a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #fb7299;
+    line-height: 34px;
+    width: 80px;
+    height: 34px;
+    border-radius: 10px;
+}
+ 
+header .upload a::before {
+    content: '\e671';
+    font-family: "iconfont" !important;
+    font-size: 18px !important;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+ 
+/* logo效果 */
+header .logo {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    width: 130px;
+    height: 60px;
+    /* background-color: pink; */
+    opacity: .7;
+}
+ 
+header .logo img {
+    width: 100%;
+    height: 100%;
+}
+ 
+/*-------------------- 头部导航栏end--------------- */
+ 
+/* ------------------ 频道模式start--------------- */
+.wrapper {
+    width: 1250px;
+    margin: 0 auto;
+}
+ 
+/* 频道的左侧 */
+.channel-left {
+    float: left;
+    height: 100px;
+    /* background-color: pink; */
+}
+ 
+.channel-left li {
+    float: left;
+    margin-top: 15px;
+    margin-right: 16px;
+    text-align: center;
+}
+ 
+.channel-left li em {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 146, 18);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px !important;
+    color: #fff;
+    margin-bottom: 3px;
+}
+ 
+.channel-left li:nth-child(2) em {
+    background-color: #f07775;
+}
+ 
+.channel-left li:nth-child(3) em {
+    background-color: #9de0ad;
+}
+ 
+/* 频道列表 */
+.channel .channel-list {
+    float: left;
+    width: 854px;
+    height: 100px;
+    /* background-color: pink; */
+    padding-top: 15px;
+}
+ 
+.channel .channel-list ul li {
+    float: left;
+    width: 86px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f6f7f8;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 28px;
+}
+ 
+.channel .channel-list ul li:nth-child(9n) {
+    margin-right: 0;
+}
+ 
+.channel .channel-list ul li:nth-child(n+9) {
+    margin-bottom: 0;
+}
+ 
+.channel .channel-list ul li:last-child::after {
+    content: '\e601';
+    font-family: "iconfont" !important;
+    font-size: 13px !important;
+}
+ 
+.channel .channel-list ul li:hover {
+    background-color: #e3e5e7;
+}
+ 
+.channel {
+    height: 100px;
+}
+ 
+/* 频道的右侧 */
+.channel .channel-right {
+    float: right;
+    width: 210px;
+    height: 66px;
+    border-left: 1px solid #e3e5e7;
+    margin-top: 14px;
+    padding-top: 10px;
+    padding-left: 10px;
+    /* background-color: skyblue; */
+}
+ 
+.channel .channel-right ul li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    color: #61666d;
+    cursor: pointer;
+}
+ 
+.channel .channel-right ul li:nth-child(n+4) {
+    margin-bottom: 0;
+}
+ 
+.channel .channel-right ul li:nth-child(3n) {
+    margin-right: 0;
+}
+ 
+.channel .channel-right ul li:hover {
+    color: #00aeec;
+}
+ 
+/* --------- 频道模式end------------- */
+ 
+/*-------- 轮播图start------- */
+.banner {
+    height: 435px;
+    /* background-color: pink; */
+}
+ 
+/* 轮播图左边 */
+.banner .carousel {
+    float: left;
+    width: 495px;
+    height: 365px;
+    /* 溢出隐藏配合圆角使用 */
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: skyblue; */
+}
+ 
+/* 轮播图图片 */
+.banner .carousel img {
+    display: block;
+    width: 495px;
+    height: 280px;
+}
+ 
+.banner .carousel .carousel-info {
+    width: 495px;
+    height: 85px;
+    /* background-color: skyblue; */
+}
+ 
+/* 轮播图 信息区域 */
+.carousel-info {
+    position: relative;
+    width: 495px;
+    height: 85px;
+    padding: 15px 10px 0;
+    background-color: #5e462e;
+    box-shadow: 0px -17px 26px 17px #5e462e;
+}
+ 
+/* 信息区域的上部 */
+.carousel-info-HD {
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+}
+ 
+.carousel-info-HD h3 {
+    float: left;
+    font-size: 18px;
+}
+ 
+.carousel-info-HD-btn {
+    float: right;
+}
+ 
+.carousel-info-HD-btn em {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+    font-size: 12px !important;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255, .4);
+}
+ 
+.carousel-info-HD-btn em:hover {
+    background-color: rgb(255, 255, 255, .6);
+}
+ 
+.arousel-info-BD {
+    margin-top: 5px;
+}
+ 
+.arousel-info-BD ul li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: rgb(216, 207, 207, .6);
+}
+ 
+.arousel-info-BD ul li:hover {
+    background-color: #fff;
+}
+ 
+/* 轮播图右边---视频页 */
+.banner .video {
+    float: left;
+    width: 746px;
+    height: 435px;
+    margin-left: 9px;
+    /* background-color: skyblue; */
+}
+ 
+/* -------.banner */
+ 
+.banner .video li:nth-child(3n) {
+    margin-right: 0;
+}
+ 
+.banner .video li:nth-child(n+4) {
+    margin-bottom: 0;
+}
+ 
+ 
+/* ------------ 轮播图 end----------- */
+/* ------ 推广模块开始 -------- */
+.extend {
+    height: 283px;
+    /* background-color: pink; */
+}
+ 
+.extend .bottom {
+    height: 253px;
+    /* background-color: skyblue; */
+    padding: 12px 0 29px;
+    border-bottom: 1px solid #f1f2f3;
+}
+ 
+/* 推广下面视频 */
+.extend .bottom .video {
+    height: 212px;
+}
+ 
+.bottom .video li:last-child {
+    margin-right: 0;
+}
+ 
+.extend .video li .writer {
+    margin-top: 0;
+    font-size: 13px;
+    color: #9499A0;
+}
+ 
+/* 推广模块结束 */
+ 
+/* 图片横栏 */
+.pic {
+    height: 166px;
+    padding-top: 62px;
+}
+ 
+.pic img {
+    width: 100%;
+    height: 104px;
+}
+ 
+/* 直播模块开始 */
+.live,
+.dance {
+    height: 505px;
+    margin-top: 57px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f2f3;
+    /* background-color: pink; */
+}
+ 
+.live .bottom {
+    height: 434px;
+    margin-top: 10px;
+    /* background-color: skyblue; */
+}
+ 
+.live .bottom .video li:nth-child(5n) {
+    margin-right: 0;
+}
+ 
+.live .bottom .video li:nth-child(n+6) {
+    margin-bottom: 0;
+}
+ 
+/* 动态图标 */
+.video li .topic i {
+    float: left;
+    width: 60px;
+    height: 16px;
+    font-size: 12px;
+    color: #ff6699;
+    background-image: url(../images/live.gif);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 16px;
+    border: 1px solid #ff6699;
+    border-radius: 7px;
+}
+ 
+/* 动画模块开始 */
+.animation {
+    height: 283px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f2f3;
+    /* background-color: pink;  */
+}
+ 
+ 
+ 
+.animation .bottom {
+    margin-top: 10px;
+}
+ 
+.animation .video li {
+    margin-bottom: 0;
+}
+ 
+.animation .video li:last-child {
+    margin-right: 0;
+}
+ 
+/* 番剧模块开始 */
+.top-left .update {
+    float: left;
+    width: 76px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #87ceeb;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+ 
+.top-left ul {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+ 
+.top-left li {
+    float: left;
+    width: 48px;
+    height: 30px;
+    padding-right: 10px;
+    color: #61666d;
+}
+ 
+.drama-writer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #9499A0;
+}
+ 
+/* 国创模块开始 */
+/* 图片横栏 */
+/* 舞蹈模块 */
+.dance .top {
+    display: inline-block;
+    width: 1000px;
+}
+ 
+.dance-left {
+    float: left;
+    width: 1000px;
+    /* background-color: pink; */
+}
+ 
+.dance-right {
+    float: right;
+    width: 242px;
+    /* height: 100%; */
+    margin-left: 8px;
+    /* background-color: skyblue; */
+}
+ 
+.dance-left .video {
+    margin-top: 10px;
+}
+ 
+.dance-left li:nth-child(4n) {
+    margin-right: 0;
+}
+ 
+.dance-left li:nth-child(n+5) {
+    margin-bottom: 0;
+}
+ 
+.dance-right-HD {
+    height: 30px;
+    line-height: 30px;
+    color: #18191c;
+    padding-left: 15px;
+}
+ 
+.dance-right-HD p {
+    float: left;
+    font-size: 24px;
+    font-weight: 700;
+}
+ 
+.dance-right-HD .more {
+    float: right;
+    width: 60px;
+}
+ 
+.dance-right-BD {
+    margin-top: 10px;
+}
+ 
+.dance-right-BD ul {
+    width: 242px;
+    border-radius: 4px;
+    border: 1px solid #e3e5e7;
+}
+ 
+.dance-right-BD li {
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 8px;
+    /* /* 1.先溢出隐藏 */
+    overflow: hidden;
+    /* 2.让其不换行 */
+    white-space: nowrap;
+    /* 超出的用省略号 */
+    text-overflow: ellipsis;
+    /* background-color: orange; */
+    color: #000;
+}
+ 
+.dance-right-BD li:nth-child(2n) {
+    background-color: #f6f7f8;
+}
+ 
+.dance-right-BD li:nth-child(1) .num {
+    color: #ff473d;
+}
+ 
+.dance-right-BD li:nth-child(2) .num {
+    color: #ff6a29;
+}
+ 
+.dance-right-BD li:nth-child(3) .num {
+    color: #ff9214;
+}
+ 
+.dance-right-BD li:nth-child(n+4) .num {
+    color: #c9ccd0;
+}
+ 
+/* 专栏模块 */
+.column .dance-left li {
+    float: left;
+    width: 495px;
+    height: 90px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: #9499A0;
+}
+ 
+.column li:nth-child(2n) {
+    margin-right: 0;
+}
+ 
+.column .pic {
+    float: left;
+    width: 118px;
+    height: 88px;
+}
+ 
+.column li img {
+    float: left;
+    display: block;
+    width: 118px;
+    height: 88px;
+    border-radius: 7px;
+}
+ 
+.column .pic-info {
+    float: left;
+    width: 365px;
+    height: 90px;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+ 
+.column li .topic {
+    font-size: 15px;
+    color: #18191c;
+    margin-bottom: 30px;
+}
+ 
+.column li .w {
+    margin-bottom: 5px;
+}
+ 
+.column li .w,
+.up {
+    font-size: 13px;
+}
+ 
+.column li .up::before {
+    content: '\e666';
+    font-family: "iconfont" !important;
+    font-size: 13px !important;
+    margin-right: 2px;
+}
+ 
+/* footer模块开始 */
+.footer {
+    height: 492px;
+    /* background-color: pink; */
+    padding-top: 30px;
+}
+ 
+.footer-top {
+    height: 86px;
+    /* background-color: skyblue; */
+}
+ 
+.footer-top-left {
+    height: 86px;
+    float: left;
+    width: 350px;
+    /* background-color: orange; */
+}
+ 
+.footer-top-middle {
+    height: 86px;
+    float: left;
+    width: 450px;
+    margin: 0 60px;
+    /* background-color: orange; */
+}
+ 
+.footer-top-right {
+    height: 86px;
+    float: left;
+    width: 280px;
+    /* background-color: orange; */
+}
+ 
+.footer-top {
+    color: #9499A0;
+}
+ 
+.footer-top-lm li {
+    float: left;
+    line-height: 2;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #18191c;
+}
+ 
+.footer-top-lm ul {
+    margin-top: 10px;
+}
+ 
+.footer-top-right li {
+    float: left;
+    width: 70px;
+    height: 85px;
+    text-align: center;
+ 
+}
+ 
+.footer-top-right .pic {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+.footer-top-right p {
+    font-size: 14px;
+    color: #18191c;
+    margin-top: 7px;
+}
+ 
+.footer-top-right li:nth-child(1) .pic {
+    background-color: #3752c8;
+    background-image: url(../images/下载.png);
+ 
+}
+ 
+.footer-top-right li:nth-child(2) .pic {
+    background-color: #00aeec;
+    background-image: url(../images/公益.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+ 
+}
+ 
+.footer-top-right li:nth-child(3) .pic {
+    background-color: #db4437;
+    background-image: url(../images/微博.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+.footer-top-right li:nth-child(4) .pic {
+    background-color: #57bb40;
+    background-image: url(../images/微信.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+.footer-bottom {
+    width: 1010px;
+    height: 346px;
+    /* background-color: skyblue; */
+    margin: 30px auto;
+    padding-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid #e3e5e7;
+    color: #9499a0;
+    line-height: 2;
+}
+ 
+.footer-bottom p span {
+    color: #2fb7ef;
+}
+ 
+.footer-bottom p em {
+    display: inline-block;
+    /* 行内块与文本对齐 */
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/footer.png);
+    background-repeat: no-repeat;
+}
+ 
+.footer-bottom .one {
+    width: 15px;
+    height: 16px;
+    background-position: 0 -2px;
+}
+ 
+.footer-bottom .two {
+    width: 15px;
+    height: 13px;
+    background-position: -19px -3px;
+}
+ 
+.footer-bottom .pic {
+    margin-top: 30px;
+    /* overflow: hidden; */
+    padding-bottom: 30px;
+}
+ 
+.footer-bottom .pic img {
+    width: 96px;
+    height: 39px;
+    margin-right: 10px;
+}
+ 
+/* 固定定位侧边栏 */
+.sidebar {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    width: 40px;
+    height: 200px;
+    margin-left: 650px;
+}
+ 
+.sidebar ul li {
+    width: 40px;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #e3e5e7;
+    color: #18191c;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-top: 10px;
+    cursor: pointer;
+}
+ 
+.sidebar ul li .iconfont {
+    font-size: 22px !important;
+}
+ 
+/* 平滑滚动回到顶部 */
+body,
+html {
+    scroll-behavior: smooth;
+}/* CSS Document */
+

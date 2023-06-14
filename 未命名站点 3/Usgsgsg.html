@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bilibili是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。大家可以在这里找到许多欢乐。" />
+    <meta name="keywords"
+        content="Bilibili,哔哩哔哩,哔哩哔哩动画,哔哩哔哩弹幕网,弹幕视频,B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,二次元,游戏视频,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid,日本动漫,国产动漫,手机游戏,网络游戏,电子竞技,ACG燃曲,ACG神曲,追新番,新番动漫,新番吐槽,巡音,镜音双子,千本樱,初音MIKU,舞蹈MMD,MIKUMIKUDANCE,洛天依原创曲,洛天依翻唱曲,洛天依投食歌,洛天依MMD,vocaloid家族,OST,BGM,动漫歌曲,日本动漫音乐,宫崎骏动漫音乐,动漫音乐推荐,燃系mad,治愈系mad,MAD MOVIE,MAD高燃" />
+    <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <!-- 引入网站icon -->
+    <link rel="shortcut icon" href="./icon/favicon.ico">
+    <!-- 引入基础类样式表 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入公用视频的代码 -->
+    <link rel="stylesheet" href="./css/video.css">
+    <!-- 引入index.css(确保index.css在最下面) -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入字体图标css文件 -->
+    <link rel="stylesheet" href="./font/font/iconfont.css">
+</head>
+ 
+<body>
+    <!--------------------- 头部导航栏start------------------- -->
+    <header>
+        <!-- 视频的动态背景 -->
+        <video src="./video/banner2.webm" muted autoplay loop></video>
+        <!-- 导航栏  nav需要盖在视频上面,所以需要加定位 -->
+        <nav>
+            <!-- 最左侧的导航 -->
+            <div class="nav-left">
+                <ul>
+                    <li>首页</li>
+                    <li>番剧</li>
+                    <li>直播</li>
+                    <li>游戏中心</li>
+                    <li>会员购</li>
+                    <li>漫画</li>
+                    <li>赛事</li>
+                    <li>嘉年华</li>
+                </ul>
+            </div>
+            <!-- 校园十佳 -->
+            <div class="top10">
+                <div class="top-box">
+                    <img src="./images/校园十佳.png" alt="">
+                    <p>十佳</p>
+                </div>
+            </div>
+            <!-- 下载客户端 -->
+            <div class="download">
+                <a href="#">下载客户端</a>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search">
+                <input type="text" value="请输入您的搜索内容">
+            </div>
+            <!-- 登录模块 -->
+            <div class="login">
+                <a href="#">登录</a>
+            </div>
+            <!-- 用户功能 -->
+            <ul class="userFunction">
+                <li>
+                    <em class="iconfont icon-wodedahuiyuan"></em>
+                    <i>大会员</i>
+                </li>
+                <li>
+                    <em class="iconfont icon-youxiang"></em>
+                    <i>消息</i>
+                </li>
+                <li>
+                    <em class="iconfont icon-dongtai"></em>
+                    <i>动态</i>
+                </li>
+                <li>
+                    <em class="iconfont icon-shoucang"></em>
+                    <i>收藏</i>
+                </li>
+                <li>
+                    <em class="iconfont icon-lishi"></em>
+                    <i>历史</i>
+                </li>
+                <li>
+                    <em class="iconfont icon-lightbulb"></em>
+                    <i>创作中心</i>
+                </li>
+            </ul>
+            <!-- 投稿上传 -->
+            <div class="upload">
+                <a href="#">投稿</a>
+            </div>
+        </nav>
+        <!-- logo效果 -->
+        <div class="logo">
+            <img src="./images/logo1.png" alt="">
+        </div>
+    </header>
+    <!---------------------- 头部导航栏end------------------>
+    <!---------- 频道模式start-------------->
+    <div class="channel wrapper">
+        <!-- 频道的左侧 -->
+        <div class="channel-left">
+            <ul>
+                <li>
+                    <em class="iconfont icon-fengkong "></em>
+                    <p>动态</p>
+                </li>
+                <li>
+                    <em class="iconfont icon-remen "></em>
+                    <p>热门</p>
+                </li>
+                <li>
+                    <em class="iconfont icon-fenlei "></em>
+                    <p>频道</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 频道列表 -->
+        <div class="channel-list">
+            <ul>
+                <li>番剧</li>
+                <li>国创</li>
+                <li>综艺</li>
+                <li>动画</li>
+                <li>鬼畜</li>
+                <li>舞蹈</li>
+                <li>娱乐</li>
+                <li>科技</li>
+                <li>美食</li>
+                <li>电影</li>
+                <li>电视剧</li>
+                <li>纪录片</li>
+                <li>游戏</li>
+                <li>音乐</li>
+                <li>影视</li>
+                <li>知识</li>
+                <li>资讯</li>
+                <li>更多</li>
+            </ul>
+        </div>
+        <!-- 频道的右侧 -->
+        <div class="channel-right">
+            <ul>
+                <li>
+                    <em class="iconfont icon-zhuanlan "></em>
+                    <span>专栏</span>
+                </li>
+                <li>
+                    <em class="iconfont icon-wodehuodong "></em>
+                    <span>活动</span>
+                </li>
+                <li>
+                    <em class="iconfont icon-shequ "></em>
+                    <span>社区中心</span>
+                </li>
+                <li>
+                    <em class="iconfont icon-15 "></em>
+                    <span>直播</span>
+                </li>
+                <li>
+                    <em class="iconfont icon-bofang "></em>
+                    <span>课堂</span>
+                </li>
+                <li>
+                    <em class="iconfont icon-dianyingzhiye-gequbangdianjitai
+                    "></em>
+                    <span>新歌热榜</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!---------- 频道模式end-------------->
+    <!--------- 轮播图 start------- -->
+    <div class="banner wrapper">
+        <!-- 轮播图左边 -->
+        <div class="carousel">
+            <!--轮播图 图片  -->
+            <img src="./lib/轮播图.webp" alt="">
+            <!-- 轮播图 信息区域 -->
+            <div class="carousel-info">
+                <div class="carousel-info-HD">
+                    <h3>有种喜欢叫满眼都是你</h3>
+                    <div class="carousel-info-HD-btn">
+                        <em class="iconfont icon-jiantou"></em>
+                        <em class="iconfont icon-arrow-right"></em>
+                    </div>
+                </div>
+                <div class="arousel-info-BD">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播图右边---视频页 -->
+        <div class="video">
+            <ul>
+                <li>
+                    <img src="./lib/v1.webp" alt="">
+                    <div class="pageview">
+                        <span class="w">11.8万</span>
+                        <span class="q">1369</span>
+                        <span class="time">07:00</span>
+                    </div>
+                    <p class="topic">一口气《游戏王》全集!</p>
+                    <p class="writer">红豆动漫 · 6-18</p>
+                </li>
+                <li><img src="./lib/v2.webp" alt="">
+                    <div class="pageview">
+                        <span class="w">58.2万</span>
+                        <span class="q">645</span>
+                        <span class="time">04:01</span>
+                    </div>
+                    <p class="topic">这只猫,让我开心了整整四分钟!</p>
+                    <p class="writer">阿浪171 · 7-4</p>
+                </li>
+                <li>
+                    <img src="./lib/v3.webp" alt="">
+                    <div class="pageview">
+                        <span class="w">108.1万</span>
+                        <span class="q">2411</span>
+                        <span class="time">01:19</span>
+                    </div>
+                    <p class="topic">全网播放三千万的《声声慢》翻唱来啦！国语&粤语你更想听哪个呢？</p>
+                    <p class="writer">浅影阿_ · 6-23</p>
+                </li>
+                <li><img src="./lib/v4.webp" alt="">
+                    <div class="pageview">
+                        <span class="w">205.8万</span>
+                        <span class="q">4555</span>
+                        <span class="time">04:48</span>
+                    </div>
+                    <p class="topic">当你写了个BUG但是刚好能运行!</p>
+                    <p class="writer">酥妃大魔王 · 6-17</p>
+                </li>
+                <li>
+                    <img src="./lib/v5.webp" alt="">
+                    <div class="pageview">
+                        <span class="w">85.5万</span>
+                        <span class="q">862</span>
+                        <span class="time">02:24</span>
+                    </div>
+                    <p class="topic">有 人 等 烟 雨 ， 有 人 怪 雨 急</p>
+                    <p class="writer">橘子味i汽水 · 6-16</p>
+                </li>
+                <li><img src="./lib/v6.webp" alt="">
+                    <div class="pageview">
+                        <span class="w">638.1万</span>
+                        <span class="q">8116</span>
+                        <span class="time">11:59</span>
+                    </div>
+                    <p class="topic">汤姆：法庭上禁止电音摇！！！</p>
+                    <p class="writer">芦苇十三少 · 6-17</p>
+                </li>
+ 
+            </ul>
+        </div>
+    </div>
+    <!--------- 轮播图 end-------  -->
+    <!-- 推广模块开始 -->
+    <div class="extend wrapper">
+        <!-- 顶部推广文字栏 -->
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/推广.png" alt="">
+                <span>推广</span>
+            </div>
+        </div>
+        <!-- 推广下面视频 -->
+        <div class="bottom">
+            <div class="video">
+                <ul>
+                    <li><img src="./lib/t1.webp" alt="">
+ 
+                        <p class="topic">每天建模一小时，趁年轻多学点技能养活自己！</p>
+                        <p class="writer">博学教育</p>
+                    </li>
+                    <li><img src="./lib/t2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">14.2万</span>
+                            <span class="q">1224</span>
+                            <span class="time">12:01</span>
+                        </div>
+                        <p class="topic">粘在一起の家！房子可不是夹心饼干啊！你搁这变形金刚呢？</p>
+                        <p class="writer">百万巨星麒麟君 · 7-19</p>
+                    </li>
+                    <li><img src="./lib/t3.webp" alt="">
+ 
+                        <p class="topic">IGN评分10，媒体玩家吹爆的公认神作！</p>
+                        <p class="writer">极限竞速：地平线</p>
+                    </li>
+                    <li><img src="./lib/t4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">12万</span>
+                            <span class="q">167</span>
+                            <span class="time">01:45</span>
+                        </div>
+                        <p class="topic">史上最差《武林外传》动画版？</p>
+                        <p class="writer">彩虹咸鱼YA · 7-22</p>
+                    </li>
+                    <li><img src="./lib/t5.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">6.1万</span>
+                            <span class="q">284</span>
+                            <span class="time">03:07</span>
+                        </div>
+                        <p class="topic">【STAYC】 STAYC 'BEAUTIFUL MONSTER' 舞蹈练习室</p>
+                        <p class="writer">STAYC_official · 7-21</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 推广模块结束 -->
+    <!-- 图片横栏 -->
+    <div class="pic wrapper">
+        <img src="./lib/广告1.webp" alt="">
+    </div>
+    <!-- 直播模块开始 -->
+    <div class="live wrapper">
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/直播.png" alt="">
+                <span>直播</span>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>换一换</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+                <p>直播排行</p>
+                <p>关注主播</p>
+                <p>为你推荐</p>
+            </div>
+        </div>
+        <!-- 底下的视频 -->
+        <div class="bottom">
+            <div class="video">
+                <ul>
+                    <li>
+                        <img src="./lib/z1.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">736</span>
+                            <span class="time">剑网3</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            【剑网3】欢迎呀
+                        </p>
+                        <p class="writer">予绵绵</p>
+                    </li>
+                    <li><img src="./lib/z2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">1036</span>
+                            <span class="time">陪伴学习</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            一起来学习3D建模呀
+                        </p>
+                        <p class="writer">沉迷于游戏建模</p>
+                    </li>
+                    <li>
+                        <img src="./lib/z3.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">3291</span>
+                            <span class="time">和平精英</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            每周日晚上带舰长快乐4排起飞！
+                        </p>
+                        <p class="writer">慢热lpc</p>
+                    </li>
+                    <li><img src="./lib/z4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">11.4万</span>
+ 
+                            <span class="time">主机游戏</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            葬花DLC
+                        </p>
+                        <p class="writer">C酱です</p>
+                    </li>
+                    <li>
+                        <img src="./lib/z5.webp" alt="">
+                        <div class="pageview">
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            上汽奥迪A7L专场
+                        </p>
+                    </li>
+                    <li><img src="./lib/z6.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2.9万</span>
+                            <span class="time">APEX</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            住在纸里的鹰在画上飞vr
+                        </p>
+                        <p class="writer">我Geebar谁啊</p>
+                    </li>
+                    <li><img src="./lib/z7.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2171</span>
+                            <span class="time">聊天电台</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            封面和本人一样
+                        </p>
+                        <p class="writer">夏啵yo</p>
+                    </li>
+                    <li><img src="./lib/z8.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2475</span>
+                            <span class="time">虚拟主播</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            3D大鸭唠嗑时间嘎
+                        </p>
+                        <p class="writer">花见汐梨Yuuri</p>
+                    </li>
+                    <li><img src="./lib/z9.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">11.4万</span>
+                            <span class="time">主机游戏</span>
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            晚上该π了喵
+                        </p>
+                        <p class="writer">Yommyko</p>
+                    </li>
+                    <li><img src="./lib/z10.webp" alt="">
+                        <div class="pageview">
+                        </div>
+                        <p class="topic">
+                            <i>直播</i>
+                            王者荣耀女子公开赛
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 动画模块开始 -->
+    <div class="animation wrapper">
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/动画.png" alt="">
+                <span>动画</span>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>换一换</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="video">
+                <ul>
+                    <li>
+                        <img src="./lib/d1.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">11.4万</span>
+                            <span class="q">254</span>
+                            <span class="time">15:41</span>
+                        </div>
+                        <p class="topic">十二年前最恐怖悬疑作！童年阴影！！《尸鬼》剧情解说02</p>
+                        <p class="writer">中二少年晓凯 · 10小时前</p>
+                    </li>
+                    <li><img src="./lib/d2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">38.2万</span>
+                            <span class="q">1.2万</span>
+                            <span class="time">02:10:19</span>
+                        </div>
+                        <p class="topic">[方舟动画]指挥不规范，干员一条龙。</p>
+                        <p class="writer">十字减一 · 7-11</p>
+                    </li>
+                    <li><img src="./lib/d3.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">6.4万</span>
+                            <span class="q">55</span>
+                            <span class="time">00:40</span>
+                        </div>
+                        <p class="topic">雷蛰同人曲《阶上之囚》（《荆棘花园》填词）。</p>
+                        <p class="writer">亚洛特-斯帝维尔 · 7-6</p>
+                    </li>
+                    <li>
+                        <img src="./lib/d4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">11.4万</span>
+                            <span class="q">254</span>
+                            <span class="time">03:40</span>
+                        </div>
+                        <p class="topic">《欧因哥 波因哥 历险记》</p>
+                        <p class="writer">海边的海草 · 3-15</p>
+                    </li>
+                    <li><img src="./lib/d5.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">9793</span>
+                            <span class="q">31</span>
+                            <span class="time">6:06</span>
+                        </div>
+                        <p class="topic">【全熟】看综艺学英语两不误！EN大联动！！【英语学习】</p>
+                        <p class="writer">NIJISANJI · 3-11</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 番剧模式开始 -->
+    <div class="drama wrapper animation">
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/番剧.png" alt="">
+                <span>番剧</span>
+                <div class="update">
+                    最近更新
+                </div>
+                <ul>
+                    <li>周一</li>
+                    <li>周二</li>
+                    <li>周三</li>
+                    <li>周四</li>
+                    <li>周五</li>
+                    <li>周六</li>
+                    <li>周日</li>
+                </ul>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>新番时间表</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="video">
+                <ul>
+                    <li>
+                        <img src="./lib/f1.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">5.5万</span>
+                            <span class="time">948.7万追番系列</span>
+                        </div>
+                        <p class="topic">小林家的龙女仆 第二季 中配版</p>
+                        <p class="drama-writer">更新至第1话~第2话</p>
+                    </li>
+                    <li><img src="./lib/f2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">1378.12万</span>
+                            <span class="time">54.4万追番</span>
+                        </div>
+                        <p class="topic">这个治疗有点烦</p>
+                        <p class="drama-writer">更新至第12话</p>
+                    </li>
+                    <li><img src="./lib/f3.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2.9亿</span>
+                            <span class="time">215.8万追番</span>
+                        </div>
+                        <p class="topic">博人传 火影忍者新时代</p>
+                        <p class="drama-writer">更新至第250话</p>
+                    </li>
+                    <li>
+                        <img src="./lib/f4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">3134.9万</span>
+                            <span class="time">180.7万追番</span>
+                        </div>
+                        <p class="topic">式守同学不只可爱而已</p>
+                        <p class="drama-writer">更新至第9话</p>
+                    </li>
+                    <li><img src="./lib/f5.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">54.5万</span>
+                            <span class="time">2万追番</span>
+                        </div>
+                        <p class="topic">群青开场号</p>
+                        <p class="drama-writer">更新至第10话</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /* 国创模块开始 */ -->
+    <div class=" chinamade wrapper animation">
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/国创.png" alt="">
+                <span>国创</span>
+                <div class="update">
+                    最近更新
+                </div>
+                <ul>
+                    <li>周一</li>
+                    <li>周二</li>
+                    <li>周三</li>
+                    <li>周四</li>
+                    <li>周五</li>
+                    <li>周六</li>
+                    <li>周日</li>
+                </ul>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>新番时间表</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="video">
+                <ul>
+                    <li>
+                        <img src="./lib/g1.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">699.4万</span>
+                            <span class="time">597.1万追番系列</span>
+                        </div>
+                        <p class="topic">百妖谱·京师篇</p>
+                        <p class="drama-writer">更新至第1话~第2话</p>
+                    </li>
+                    <li><img src="./lib/g2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">302.2万</span>
+                            <span class="time">62.2万追番</span>
+                        </div>
+                        <p class="topic">梦幻书院 第七季</p>
+                        <p class="drama-writer">更新至第6话</p>
+                    </li>
+                    <li><img src="./lib/g3.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">1251万</span>
+                            <span class="time">25.6万追番</span>
+                        </div>
+                        <p class="topic">新围棋少年</p>
+                        <p class="drama-writer">更新至第22集～23集</p>
+                    </li>
+                    <li>
+                        <img src="./lib/g4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">9.5亿</span>
+                            <span class="time">629万追番</span>
+                        </div>
+                        <p class="topic">凡人修仙传</p>
+                        <p class="drama-writer">更新至第60话</p>
+                    </li>
+                    <li><img src="./lib/g5.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">238.8万</span>
+                            <span class="time">22.4万追番</span>
+                        </div>
+                        <p class="topic">上海故事</p>
+                        <p class="drama-writer">更新至第4话</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 图片横栏 -->
+    <div class="pic wrapper">
+        <img src="./lib/广告2.webp" alt="">
+    </div>
+    <!-- 舞蹈模块 -->
+    <div class="dance wrapper clearfix">
+        <div class="dance-right">
+            <div class="dance-right-HD">
+                <p>排行榜</p>
+                <span class="more">更多</span>
+            </div>
+            <div class="dance-right-BD">
+                <ul class="dance-list">
+                    <li>
+                        <span class="num">1</span>
+                        <span>约 尔 蹦 迪 2.0，跳 极 乐 净 土 啊啊 </span>
+                    </li>
+                    <li>
+                        <span class="num">2</span>
+                        <span>【kiku】元气少女缘结神</span>
+                    </li>
+                    <li>
+                        <span class="num">3</span>
+                        <span>危险的广寒宫</span>
+                    </li>
+                    <li>
+                        <span class="num">4</span>
+                        <span>☆Get Down☆ 和Miku一起来啊</span>
+                    </li>
+                    <li>
+                        <span class="num">5</span>
+                        <span>糟糕！恋爱告急了⚠</span>
+                    </li>
+                    <li>
+                        <span class="num">6</span>
+                        <span>换了个新摄影师， 快帮我看看 呀呀呀</span>
+                    </li>
+                    <li>
+                        <span class="num">7</span>
+                        <span>【TF家族】练习生的舞蹈记录 啊啊啊</span>
+                    </li>
+                    <li>
+                        <span class="num">8</span>
+                        <span>进来解暑！ 超清凉小城夏天 啦啦啦啦</span>
+                    </li>
+                    <li>
+                        <span class="num">9</span>
+                        <span>去天台跳个舞吧！Mr.Chu</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/舞蹈.png" alt="">
+                <span>舞蹈</span>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>换一换</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+            </div>
+        </div>
+        <div class="dance-left">
+            <div class="video">
+                <ul>
+                    <li>
+                        <img src="./lib/w1.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2.6万</span>
+                            <span class="q">155</span>
+                            <span class="time">11:53</span>
+                        </div>
+                        <div class="topic">
+                            <p>
+                                【Crepudding】What a Wonderful Dream!!【圣地还原】 Dream!!【圣地还原】
+                            </p>
+                        </div>
+                        <p class="writer">クレープリン · 7-10</p>
+                    </li>
+                    <li><img src="./lib/w2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">13万</span>
+                            <span class="q">189</span>
+                            <span class="time">01:22</span>
+                        </div>
+                        <p class="topic">
+                            超 甜 小 师 妹！周杰伦《本草纲目》~华流才是最拽的
+                        </p>
+                        <p class="writer">慕慕有奶糖 · 7-11</p>
+                    </li>
+                    <li>
+                        <img src="./lib/w3.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">89万</span>
+                            <span class="q">1536</span>
+                            <span class="time">03:25</span>
+                        </div>
+                        <p class="topic">
+                            【扒舞用】!已镜面! ITZY新歌《SNEAKERS》唱词C位直拍(更多精彩)
+                        </p>
+                        <p class="writer">小李同学23 · 7-18</p>
+                    </li>
+                    <li><img src="./lib/w4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">4.8万</span>
+                            <span class="q">109</span>
+                            <span class="time">01:38</span>
+                        </div>
+                        <p class="topic">
+                            东 风 夜 放 花 千 树
+                        </p>
+                        <p class="writer">西四炸弹 · 7-23</p>
+                    </li>
+                    <li><img src="./lib/w5.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2.8万</span>
+                            <span class="q">58</span>
+                            <span class="time">01:53</span>
+                        </div>
+                        <p class="topic">
+                            【灵活翻跳】POP!
+                        </p>
+                        <p class="writer">林远夏爱吃炒年糕 · 7-14</p>
+                    </li>
+                    <li>
+                        <img src="./lib/w6.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">24.1万</span>
+                            <span class="q">5069</span>
+                            <span class="time">01:19</span>
+                        </div>
+                        <p class="topic">
+                            【IXFORM】好齐！小分队舞蹈cover神话《Perfect Man》 孙亦非啦啦啦
+                        </p>
+                        <p class="writer">青闯小站 · 7-25</p>
+                    </li>
+                    <li><img src="./lib/w7.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">163.1万</span>
+                            <span class="q">9870</span>
+                            <span class="time">03:59</span>
+                        </div>
+                        <p class="topic">
+                            aespa新曲【Illusion怪火】练习室公开
+                        </p>
+                        <p class="writer">pcyxjy · 7-1</p>
+                    </li>
+                    <li><img src="./lib/w8.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2.7万</span>
+                            <span class="q">24</span>
+                            <span class="time">03:11</span>
+                        </div>
+                        <p class="topic">
+                            【SING女团】《唐宫少女》舞蹈版MV（汉服版），娇憨可爱梦回大唐盛状的时候
+                        </p>
+                        <p class="writer">
+                            SING女团 · 5-21</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 动物圈模块 -->
+    <div class="animal dance wrapper">
+        <div class="dance-right">
+            <div class="dance-right-HD">
+                <p>排行榜</p>
+                <span class="more">更多</span>
+            </div>
+            <div class="dance-right-BD">
+                <ul class="dance-list">
+                    <li>
+                        <span class="num">1</span>
+                        <span>一直在模仿，从未被超越 </span>
+                    </li>
+                    <li>
+                        <span class="num">2</span>
+                        <span> 自己乖乖吃肠肠, 不争也不抢吃的 风格的 </span>
+                    </li>
+                    <li>
+                        <span class="num">3</span>
+                        <span>谁能想到被狗子带大的猫居然会左右</span>
+                    </li>
+                    <li>
+                        <span class="num">4</span>
+                        <span>越 努 力，越 滋 润？</span>
+                    </li>
+                    <li>
+                        <span class="num">5</span>
+                        <span>第一次， 也是最后一次和你睡觉觉</span>
+                    </li>
+                    <li>
+                        <span class="num">6</span>
+                        <span>击中你的心巴！</span>
+                    </li>
+                    <li>
+                        <span class="num">7</span>
+                        <span>冰冰团队】难产妈妈和她唯一的孩子</span>
+                    </li>
+                    <li>
+                        <span class="num">8</span>
+                        <span>小丑蛙的蝌蚪~这嗓子眼用脑子去读书</span>
+                    </li>
+                    <li>
+                        <span class="num">9</span>
+                        <span>猫德学院校训:装模作样5分钟在学习</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/动物圈.jpg" alt="">
+                <span>动物圈</span>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>换一换</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+            </div>
+        </div>
+        <div class="dance-left">
+            <div class="video">
+                <ul>
+                    <li>
+                        <img src="./lib/dw1.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">55.5万</span>
+                            <span class="q">257</span>
+                            <span class="time">01:50</span>
+                        </div>
+                        <div class="topic">
+                            <p>
+                                快一岁的小猫咪了，吃饭还要麻麻喂
+                            </p>
+                        </div>
+                        <p class="writer">爱赖床的图图 · 7-11</p>
+                    </li>
+                    <li><img src="./lib/dw2.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">579.9万</span>
+                            <span class="q">5133</span>
+                            <span class="time">02:29</span>
+                        </div>
+                        <p class="topic">
+                            这次不用绑架小猫，直接楼下捡了一个品种猫
+                        </p>
+                        <p class="writer">本喵叫兔兔 · 7-11</p>
+                    </li>
+                    <li>
+                        <img src="./lib/dw3.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">61.2万</span>
+                            <span class="q">731</span>
+                            <span class="time">02:50</span>
+                        </div>
+                        <p class="topic">
+                            生命就是这个世界最伟大的作品
+                        </p>
+                        <p class="writer">幸运猎手 · 7-18</p>
+                    </li>
+                    <li><img src="./lib/dw4.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">11.1万</span>
+                            <span class="q">368</span>
+                            <span class="time">01:34</span>
+                        </div>
+                        <p class="topic">
+                            狗：我这还叫长得丑？？？
+                        </p>
+                        <p class="writer">静丝粼 · 7-15</p>
+                    </li>
+                    <li><img src="./lib/dw5.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">2428</span>
+                            <span class="q">19</span>
+                            <span class="time">06:38</span>
+                        </div>
+                        <p class="topic">
+                            女儿一直想养一只狗，而今天正好在路上遇见了你，或许这就是缘分吧 ghjfghjfgjhgg
+                        </p>
+                        <p class="writer">狗日志 · 7-18</p>
+                    </li>
+                    <li>
+                        <img src="./lib/dw6.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">162.2万</span>
+                            <span class="q">1667</span>
+                            <span class="time">02:08</span>
+                        </div>
+                        <p class="topic">
+                            满级猫猫行为大赏
+                        </p>
+                        <p class="writer">戒喵中心 · 4-8</p>
+                    </li>
+                    <li><img src="./lib/dw7.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">5.6万</span>
+                            <span class="q">301</span>
+                            <span class="time">04:46</span>
+                        </div>
+                        <p class="topic">
+                            热心商家送来一车猫粮，300多只流浪猫吃得比过年还干净
+                        </p>
+                        <p class="writer">爱之家的小伙伴 · 7-5</p>
+                    </li>
+                    <li><img src="./lib/dw8.webp" alt="">
+                        <div class="pageview">
+                            <span class="w">5万</span>
+                            <span class="q">279</span>
+                            <span class="time">04:30</span>
+                        </div>
+                        <p class="topic">
+                            【SING女团】《唐宫少女》舞蹈版MV（汉服版），娇憨可爱梦回大唐盛状的时候
+                        </p>
+                        <p class="writer">
+                            SING女团 · 5-21</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+ 
+    </div>
+    <!-- 专栏模块 -->
+    <div class="column dance wrapper">
+        <div class="dance-right">
+            <div class="dance-right-HD">
+                <p>排行榜</p>
+                <span class="more">更多</span>
+            </div>
+            <div class="dance-right-BD">
+                <ul class="dance-list">
+                    <li>
+                        <span class="num">1</span>
+                        <span>一直在模仿，从未被超越 </span>
+                    </li>
+                    <li>
+                        <span class="num">2</span>
+                        <span> 自己乖乖吃肠肠, 不争也不抢吃的 风格的 </span>
+                    </li>
+                    <li>
+                        <span class="num">3</span>
+                        <span>谁能想到被狗子带大的猫居然会左右</span>
+                    </li>
+                    <li>
+                        <span class="num">4</span>
+                        <span>越 努 力，越 滋 润？</span>
+                    </li>
+                    <li>
+                        <span class="num">5</span>
+                        <span>第一次， 也是最后一次和你睡觉觉</span>
+                    </li>
+                    <li>
+                        <span class="num">6</span>
+                        <span>击中你的心巴！</span>
+                    </li>
+                    <li>
+                        <span class="num">7</span>
+                        <span>冰冰团队】难产妈妈和她唯一的孩子</span>
+                    </li>
+                    <li>
+                        <span class="num">8</span>
+                        <span>小丑蛙的蝌蚪~这嗓子眼用脑子去读书</span>
+                    </li>
+                    <li>
+                        <span class="num">9</span>
+                        <span>猫德学院校训:装模作样5分钟在学习</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="top">
+            <div class="top-left">
+                <img src="./images/专栏.jpg" alt="">
+                <span>专栏模块</span>
+            </div>
+            <div class="top-right">
+                <div class="replace">
+                    <span>换一换</span>
+                </div>
+                <div class="more">
+                    <span> 查看更多</span>
+                </div>
+            </div>
+        </div>
+        <div class="dance-left">
+            <ul>
+                <li>
+ 
+                    <img src="./lib/zl1.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">专访海清:我和我的横冲直撞</p>
+                        <p class="w">736阅读 · 9点赞</p>
+                        <p class="up">会火-娱乐先知</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl2.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">【推理入门·番外01】近期新阅or重温作品盘点——最近的封面越来越好看了(੭ˊᵕˋ)੭</p>
+                        <p class="w">1450阅读 · 164点赞</p>
+                        <p class="up">风格里哦</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl3.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">究竟是徒有其表，还是内有乾坤——聊一聊《瞬息全宇宙》</p>
+                        <p class="w">1215阅读 · 29点赞</p>
+                        <p class="up">赛博一代</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl4.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">间谍过家家：神书配神剧，奇人配奇文——当“经济学殖民家的魔爪”伸向Spy×Famliy</p>
+                        <p class="w">698阅读 · 23点赞</p>
+                        <p class="up">littlemiro</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl5.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">写在游戏王作者高桥和希先生去世之后</p>
+                        <p class="w">899阅读 · 24点赞</p>
+                        <p class="up">伤感君</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl6.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">《暖雪》：国风剑仙克苏鲁，龙潜于雪一鸣惊人</p>
+                        <p class="w">754阅读 · 7点赞</p>
+                        <p class="up">Rin-Yuchen</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl7.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">因为太难吃，LV开的餐厅被网友冲烂了…</p>
+                        <p class="w">1198阅读 · 28点赞</p>
+                        <p class="up">厨房人类</p>
+                    </div>
+                </li>
+                <li>
+ 
+                    <img src="./lib/zl8.webp" alt="">
+ 
+                    <div class="pic-info">
+                        <p class="topic">中国第一虚拟歌姬，今天10岁了</p>
+                        <p class="w">1912阅读 · 158点赞</p>
+                        <p class="up">小电视报道</p>
+                    </div>
+                </li>
+ 
+            </ul>
+        </div>
+ 
+    </div>
+    <!-- footer模块开始 -->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="wrapper">
+                <div class="footer-top-left footer-top-lm">
+                    <p>bilibili</p>
+                    <ul>
+                        <li>关于我们</li>
+                        <li>联系我们</li>
+                        <li>用户协议</li>
+                        <li>加入我们</li>
+                        <li>友情链接</li>
+                        <li>隐私协议</li>
+                        <li>bilibili认证</li>
+                        <li>Incestor Relations</li>
+                    </ul>
+                </div>
+                <div class="footer-top-middle footer-top-lm">
+                    <p>传送门</p>
+                    <ul>
+                        <li>协议汇总</li>
+                        <li>活动中心</li>
+                        <li>活动专题页</li>
+                        <li>侵权申诉</li>
+                        <li>帮助中心</li>
+                        <li>社区中心</li>
+                        <li>壁纸站</li>
+                        <li>广告合作</li>
+                        <li>名人堂</li>
+                        <li>MCN管理中心</li>
+                        <li>高级弹幕</li>
+                        <li>品牌号官网</li>
+                    </ul>
+                </div>
+                <div class="footer-top-right">
+                    <ul>
+                        <li>
+                            <div class="pic">
+                            </div>
+                            <p>下载APP</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                            </div>
+                            <p>公益</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                            </div>
+                            <p>官方微博</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                            </div>
+                            <p>官方微信</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><span>营业执照</span> 信息网络传播视听节目许可证：0910417 网络文化经营许可证 沪网文【2019】3804-274号 广播电视节目制作经营许可证：（沪）字第01248号
+                增值电信业务经营许可证 沪B2-20100043</p>
+            <p>互联网ICP备案：沪ICP备13002172号-3出版物经营许可证 沪批字第U6699 号互联网药品信息服务资格证 沪-非经营性-2016-0143营业性演出许可证 沪市文演（经）00-2253 |</p>
+            <p>不良信息举报邮箱：help@bilibili.com涉未成年举报邮箱：teenprotect@bilibili.com不良信息举报电话：4006262233转1</p>
+            <p> <em class="one"></em> 上海互联网举报中心 | 12318全国文化市场举报网站|</p>
+            <p> <em class="two"></em> 沪公网安备31011002002436号 | 儿童色情信息举报专区 | 扫黄打非举报</p>
+            <p>网上有害信息举报专区：</p>
+            <p><em class="two"></em>中国互联网违法和不良信息举报中心亲爱的市民朋友, 上海警方反诈劝阻电话“96110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+            <p>公司名称：上海宽娱数码科技有限公司 | 公司地址：上海市杨浦区政立路485号 | 电话：021-25099888</p>
+            <p class="pic">
+                <img src="./images/link_img1.png" alt="">
+                <img src="./images/link_img2.png" alt="">
+                <img src="./images/link_img3.png" alt="">
+            </p>
+        </div>
+    </div>
+    <!-- 固定定位侧边栏 -->
+    <div class="sidebar">
+        <ul>
+            <li>
+                新版反馈
+            </li>
+ 
+            <li>
+                <div class="iconfont icon-fenquguanli"></div>
+                分区
+            </li>
+ 
+            <li>
+                <div class="iconfont icon-kefu"></div>
+                客服
+            </li>
+            <li>
+                回到旧版
+            </li>
+            <li>
+                <a href="#">
+                    <div class="iconfont icon-huidaodingbu"></div>
+                    顶部
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+ 
+</html>

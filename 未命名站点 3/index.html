@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+
+video  {
+	width:100%;
+}
+nav {
+    position: absolute;
+	/*绝对定位后，在没有规定固定宽高的情况下，宽高由内容撑开*/
+	top:0;
+	/*top:0，left:0，right:0，bottom:0本质目的，是让子盒子四边与父容器间距为0*/
+	padding: 10px;
+}
+.nav-left ul li {
+	/*选择nav内所包含的所有ul和li元素*/
+    float:left;
+    height:50px;
+    padding:0 8px;
+    color:#FFF;
+    cursor: pointer;
+}
+
+ul li{
+	list-style:none;
+
+}
+.search {
+    float: left;
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+	/*圆角效果*/
+    background-color:#F7F7F7;
+    margin-left: 15px;
+    margin-top: -10px;
+    border: 1px solid #FFF;
+}
+.search:hover {
+    background-color:transparent;
+}
+.search input {
+    width: 250px;
+    height: 40px;
+    padding-left: 20px;
+    /* 清除输入框的轮廓线 */
+    outline: none;
+    /* 清除输入框的边框线 */
+    border: none;
+    background-color:transparent;
+}
+.img{
+	border-radius: 20px;
+	margin:-10px 5px;
+}
+
+</style>
+</head>
+<body>
+<video muted autoplay="autoplay" loop="loop" src="2021.10.20.mp4" ></video>
+<nav>
+    <div class="nav-left">
+       <ul>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首页</li>
+           <li>番剧</li>
+           <li>直播</li>
+           <li>游戏中心</li>
+           <li>会员购</li>
+           <li>漫画</li>
+           <li>赛事</li>
+           <li>嘉年华</li>
+           <div class="search">
+           <input type="text" placeholder="请输入您的搜索内容"><ul class="userFunction"></div>
+       <li >&nbsp;&nbsp;<img src="-fd96e5701f7f4ef.jpg" width="42" height="42" class="img"/> 
+       </li>     
+           <li>大会员</li>
+           <li><em class="iconfont icon-youxiang"></em>消息</li>
+           <li>动态</li>
+           <li>收藏</li>
+           <li>历史</li>
+           <li>创作中心</li>
+            </ul>
+           </ul>
+    </div>     
+</nav>
+</body>
+</html>
